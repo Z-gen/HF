@@ -1,0 +1,697 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.15;
+    font-family: "SegoeUiRegular";
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #36ff42;
+    text-shadow: none;
+}
+
+::selection {
+    background: #36ff42;
+    text-shadow: none;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/* HEADERS */
+
+h1, h2, h3, h4, h5, h6 {
+    color: #4d4d4d;
+}
+
+.titleScreen {
+    text-align: center;
+    padding: 60px 0;
+    width: 100%;
+}
+
+.titleScreen h1 {
+    margin: 0;
+}
+
+
+h1 {
+    font-weight: 200;
+    font-size: 72px;
+    font-family: 'SegoeUiLight';
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 60px;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 48px;
+}
+
+/* DIFFERENT TEXT PROPERTIES */
+
+.text_36Light {
+    font-size: 36px;
+    font-weight: 200;
+}
+
+
+
+/* GREED */
+/* мини-сетка вместо бутстрапа */
+
+/* контейнер, занимающий один скрин */
+.screen {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.screenWidth_920 {
+    max-width: 920px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.rowColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+/* центрирует блок внутри флекс-контейнера */
+.flex-center {
+    margin: auto;
+}
+
+/*необходимые колонки по бутстрапу*/
+
+.column-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+/* END OF GREED */
+
+
+.mainHeader {
+    position: fixed;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: all .2s ease;
+    z-index: 1000;
+}
+
+.mainHeader.white {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
+}
+
+.mainHeader.white .menu > li > a {
+    color: #666;
+}
+
+.mainHeader.white .menu_logo {
+    filter: brightness(0.7);
+}
+
+.menu {
+    padding: 0;
+    list-style: none;
+    width: 1100px;
+    margin-top: 12px;
+    font-family: 'SegoeUiLight';
+}
+
+.menu > li > a {
+    text-transform: uppercase;
+    font-size: 19px;
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+.menu_logo {
+    position: absolute;
+    left: 25px;
+    top: 12px;
+    transition: all .2s ease;
+}
+
+.roundButton {
+    font-family: 'CenturyGothic';
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    padding: 8px 38px;
+}
+
+/* FIRST SCREEN */
+
+.firstScreen {
+    background-image: url(../img/firstScreen.jpg);
+    align-items: stretch;
+}
+
+.firstScreen__mainRow {
+    margin: auto 0;
+}
+
+.firstScreen__mainRow > div {
+    flex-basis: 33.3333%;
+    color: #fff;
+}
+
+.firstScreen__logo {
+    display: flex;
+}
+
+.firstScreen__logo img {
+    max-width: 100%;
+}
+
+.firstScreen__caption > h2 {
+    margin-bottom: 20px;
+    font-family: 'SegoeUiSemilight';
+    color: #fff;
+}
+
+.firstScreen__caption > p {
+    margin-top: 0;
+    font-family: 'SegoeUiLight';
+}
+
+.firstScreen__bottomRow {
+    padding-bottom: 45px;
+}
+
+.firstScreen__bottomRow > .downBtn {
+    display: inline-block;
+    width: 12px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+.firstScreen__bottomRow > .downBtn:hover {
+    animation: bounce 0.5s 1;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        top: 0;
+    }
+
+    50% {
+        top: 5px;
+    }
+}
+
+/* END FIRST SCREEN */
+
+
+/* SECOND SCREEN*/
+
+#how_it_works {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.howToWork__icons {
+    flex-direction: row;
+    display: flex;
+}
+
+.howToWork__iconItem {
+    width: 25%;
+}
+
+.howToWork__icon {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.howToWork__icon img {
+    display: block;
+    margin: auto;
+}
+
+.howToWork__iconItem {
+    color: #666;
+    font-size: 16px;
+    font-family: 'SegoeUiSemilight';
+    text-align: center;
+    vertical-align: middle;
+}
+.howToWork__video {
+    position: relative;
+    margin-top: 5%;
+}
+
+.howToWork__videoControls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,0.25);
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+        
+.howToWork__videoControls.paused {
+    background-color: transparent;
+}
+
+.playAndPause {
+    display: block;
+    text-align: center;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    opacity: 1;
+    width: 160px;
+    margin: auto;
+    position: absolute;
+    left: calc(50% - 80px);
+    top: calc(50% - 105px);
+}
+
+.playAndPause img {
+    cursor: pointer;
+    max-width: 100%;
+}
+
+.playAndPause .playImg {
+    display: block;
+}
+.playAndPause .pauseImg {
+    display: none;
+}
+.howToWork__videoControls.paused .playAndPause .pauseImg {
+    display: block;
+}
+.howToWork__videoControls.paused .playAndPause .playImg {
+    display: none;
+}
+
+.howToWork__videoControls.paused .playAndPause {
+    width: 50px;
+    left: 20px;
+    top: calc(100% - 75px);
+}
+
+
+/* END SECOND SCREEN*/
+
+
+
+/*THIRD SCREEN*/
+
+.calcWrap {
+    background-color: #262626;
+    color: #fff;
+    padding: 0 20px;
+    font-size: 18px;
+
+}
+
+.calculator {
+    text-align: center;
+}
+.calculatorOptions  {
+    max-width: 390px;
+    margin: auto;
+}
+.calcSectionBlock__title {
+    font-family: 'SegoeUiSemilight';
+    color: #fff;
+    margin: 30px 0;
+}
+
+.calcSectionBlock_description p {
+    margin: 0;
+}
+
+.calcSectionBlock_description,
+.calcSectionBlock__adres {
+    font-family: 'SegoeUiLight';
+}
+
+.calcSectionBlock__adres {
+    color: #808080;
+}
+
+.calculator input {
+    max-width: 100%;
+}
+
+.calculatorOptions__item {
+    background-color: #222223;
+    font-size: 24px;
+    height: 130px;
+}
+
+.calculatorOptions__item_bgLight {
+    background-color: #333333;
+}
+
+
+.calculatorOptions__item input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.calculatorOptions__item input[type="radio"]:checked + label {
+    color: #fff;
+}
+
+.calculatorOptions__item label,
+.calculatorOptions__item span {
+    color: #000;
+    font-family: 'CenturyGothic';
+}
+.calculatorOptions__item label {
+    cursor: pointer;
+}
+
+.calculatorOptions__item input {
+    background-color: transparent;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    outline: none;
+    color: #000;
+    font-family: 'CenturyGothic';
+}
+.calculatorOptions__item input::placeholder {
+    color: #000;
+    font-family: 'CenturyGothic';
+}
+
+.calculatorTable {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000;
+    table-layout: fixed
+}
+.calculatorRow {
+    display: table-row;
+}
+.calculatorCell {
+    display: table-cell;
+    border: 1px solid #000;
+    vertical-align: middle;
+}
+
+/* END THIRD SCREEN*/
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
