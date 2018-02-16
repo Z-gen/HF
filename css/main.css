@@ -183,9 +183,9 @@ h3 {
     margin: auto;
 }
 
-/*необходимые колонки по бутстрапу*/
+/*колонки*/
 
-.column-4 {
+.col-third {
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
 }
@@ -249,6 +249,16 @@ h3 {
     padding: 8px 38px;
 }
 
+.roundButton_grey {
+    border-color: #b3b3b3;
+    color: #666;
+    background-color: #fff;
+}
+
+.roundButton_small {
+    font-size: 18px;
+}
+
 /* FIRST SCREEN */
 
 .firstScreen {
@@ -261,7 +271,6 @@ h3 {
 }
 
 .firstScreen__mainRow > div {
-    flex-basis: 33.3333%;
     color: #fff;
 }
 
@@ -365,7 +374,7 @@ h3 {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-        
+
 .howToWork__videoControls.paused {
     background-color: transparent;
 }
@@ -415,12 +424,16 @@ h3 {
 
 /*THIRD SCREEN*/
 
+#calculatorSection .titleScreen {
+    padding: 60px 0 46px 0;
+}
+
 .calcWrap {
     background-color: #262626;
     color: #fff;
-    padding: 0 20px;
+    padding: 40px 20px;
     font-size: 18px;
-
+    padding-bottom: 0;
 }
 
 .calculator {
@@ -501,7 +514,7 @@ h3 {
     width: 100%;
     border-collapse: collapse;
     border: 1px solid #000;
-    table-layout: fixed
+    table-layout: fixed;
 }
 .calculatorRow {
     display: table-row;
@@ -510,6 +523,92 @@ h3 {
     display: table-cell;
     border: 1px solid #000;
     vertical-align: middle;
+}
+
+.calculatorOutputWrapper {
+    display: flex;
+    width: 390px;
+    height: 390px;
+    border-radius: 50%;
+    border: 10px solid #1bdb21;
+    margin: 40px auto;
+}
+
+.calculatorOutput {
+    margin: auto;
+}
+
+.calculationResults {
+    font-family: 'CenturyGothic';
+    font-size: 72px;
+    color: #1bdb21;
+    margin: 0;
+}
+
+.calculationMeasurement {
+    font-family: 'SegoeUILight';
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+    padding: 19px 17px 17px 24px;
+}
+
+.ui-menu .ui-state-focus, .ui-menu .ui-state-active {
+    margin: 0;
+}
+
+.ui-selectmenu-menu .ui-menu {
+    background-color: #222223;
+}
+
+.selectMenu {
+    margin-top: 30px;
+}
+
+.selectMenu .ui-selectmenu-button.ui-button {
+    font-family: 'CenturyGothic';
+    font-size: 18px;
+    color: #fff;
+    background-color: #222223;
+    border: 1px solid #000;
+    width: calc(100% - 42px);
+    padding: 19px 17px 17px 24px;
+    outline: none;
+    max-width: 348px;
+    margin: 0;
+}
+
+.ui-selectmenu-menu .ui-menu {
+    background-color: #222223;
+}
+
+.ui-menu .ui-menu-item {
+    color: #fff;
+    font-family: CenturyGothic;
+    font-size: 18px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.selectMenu .ui-selectmenu-icon.ui-icon {
+    border-top: 12px solid #666;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    top: 6px;
+    transition: all .2s ease;
+}
+
+.selectMenu .ui-selectmenu-button-open .ui-selectmenu-icon.ui-icon {
+    transform: rotateX(-180deg);
+    top: 3px;
+}
+
+.calculateButton {
+    padding: 25px 0;
 }
 
 /* END THIRD SCREEN*/

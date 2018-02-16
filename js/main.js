@@ -1,10 +1,10 @@
 function headerTransition() {
     //изменение состояния хедера в зависимости от прокрутки страницы
-    if ($(document).scrollTop() >= ($(document).height() - $('.firstScreen').height())) {
-        $('header').addClass('white');
+    if ($(document).scrollTop() >= $('.firstScreen').height()) {
+        $('.mainHeader').addClass('white');
     }
     else {
-        $('header').removeClass('white');
+        $('.mainHeader').removeClass('white');
     }
 }
 
@@ -32,39 +32,36 @@ $(function () {
     //чек хедера при загрузке страницы
     headerTransition();
 
-    //изменение состояния хедера при скроле
-    $(window).on('scroll', function(e) {
-        headerTransition();
-    })
-})
-
-
-
-
-$(document).ready(function(){
-
     var controls = {
         video: $(".videoHF"),
-        playpause: $(".playAndPause")                 
-    };     
-    var video = controls.video[0];   
+        playpause: $(".playAndPause")
+    };
+
+    var video = controls.video[0];
 
     /*действия при нажатии Play и Pause*/
     controls.playpause.click(function(){
         if (video.paused) {
-            video.play(); 
+            video.play();
             $(".howToWork__videoControls").addClass("paused");
         } else {
             video.pause();
             $(".howToWork__videoControls").removeClass("paused");
         }
     });
+
     /*определяем конец видео*/
     video.onended = function(e) {
         $(".howToWork__videoControls").removeClass("paused");
         console.log("finish");
     };
 
-    
+    //селект-меню в калькуляторе
+    $('#purposeSelect').selectmenu();
+    $('#activitiesSelect').selectmenu();
 
-}); 
+    //изменение состояния хедера при скроле
+    $(window).on('scroll', function(e) {
+        headerTransition();
+    })
+})
