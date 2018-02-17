@@ -1,0 +1,281 @@
+/* ЗАКИНУТЬ В MAIN !!!
+!!!!!!!!!!!!!!!!!!!!!!
+*/
+
+/*.row {*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+/*}*/
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!*/
+
+/* WHY US SCREEN*/
+
+.whyUsScreen {
+    background-color: #1a1a1a;
+    height: 580px;
+}
+
+.whyUsScreen > h1 {
+    margin-top: 130px;
+    color: #fff;
+    text-align: center;
+}
+
+.whyUs__container {
+    width: 1020px;
+    max-width: 1020px;
+    padding-top: 60px;
+    margin: 0 auto;
+}
+
+.whyUs__item {
+    text-align: center;
+    max-width: 134px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.whyUs__icon {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.whyUs__descr {
+    display: flex;
+    height: 45px;
+}
+
+.whyUs__descr > span {
+    color: #fff;
+    font-family: 'SegoeUiSemilight';
+    font-size: 18px;
+    margin: auto;
+    line-height: 25px;
+}
+
+/* END WHY US SCREEN*/
+
+
+/* COMPARISON */
+
+.comparisonScreen {
+    background-image: url(../img/comparisonScreen.jpg);
+    color: #fff;
+}
+
+.comparisonScreen .titleScreen {
+    padding-top: 80px;
+}
+
+.comparisonScreen .titleScreen > h1 {
+    color: #fff;
+}
+
+.comparisonScreen__container {
+    width: 1315px;
+    max-width: 1315px;
+    margin: 0 auto;
+}
+
+.comparisonScreen__mainRow {
+    max-width: 1300px;
+    width: 1300px;
+}
+
+.comparison__market {
+    padding-top: 120px;
+}
+
+.comparison__market > .comparison__itemWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.market__spin {
+    margin-right: 40px;
+}
+
+.market__spin > span {
+    display: block;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+}
+
+.market__spin .spin__up {
+    border-bottom: 21px solid #fff;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    margin-bottom: 38px;
+}
+
+.market__spin .spin__down {
+    border-top: 21px solid #fff;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+}
+
+.market__text {
+    text-align: left;
+}
+
+.market__price {
+    margin: 0;
+}
+
+.market__type {
+    font-family: CenturyGothic;
+    font-size: 45px;
+    margin: 0;
+    padding-left: 25px;
+    margin-top: -15px;
+}
+
+.market__sum {
+    font-family: 'CenturyGothic';
+    font-size: 135px;
+    color: #fff;
+}
+
+.market__currency {
+    font-family: 'SegoeUISemilight';
+    font-size: 45px;
+}
+
+.comparison__economy img {
+    position: absolute;
+}
+
+.comparison__economy > .comparison__itemWrapper {
+    background-image: url(../img/ap.png);
+    width: 318px;
+    height: 408px;
+    margin: auto;
+}
+
+.economy__text {
+    text-align: center;
+    margin: 0;
+    padding-top: 205px;
+    padding-left: 13px;
+}
+
+.economy__sum {
+    font-family: 'CenturyGothic';
+    font-size: 90px;
+    color: #fff;
+}
+
+.economy__currency {
+    font-family: 'SegoeUISemilight';
+    font-size: 45px;
+}
+
+.price__text {
+    margin: auto;
+    padding-left: 8px;
+}
+
+.comparison__price {
+    padding-top: 120px;
+}
+
+.comparison__price > .comparison__itemWrapper {
+    width: 228px;
+    height: 228px;
+    border-radius: 50%;
+    background-color: #ffff04;
+    margin: auto;
+    display: flex;
+}
+
+.price__sum {
+    font-family: 'CenturyGothic';
+    font-size: 70px;
+    color: #fff;
+}
+
+.price__currency {
+    font-family: 'SegoeUISemilight';
+    font-size: 35px;
+}
+
+
+.underText p {
+    font-family: 'CenturyGothic';
+    font-size: 35px;
+    text-align: center;
+}
+
+
+/* END COMPARISON */
+
+
+/* FOOTER */
+
+footer {
+    background-color: #1a1a1a;
+}
+
+.footer__container {
+    width: 1600px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 200px 0 45px 0;
+}
+
+.footer__descr {
+    font-family: SegoeUISemilight;
+    font-size: 36px;
+    color: #fff;
+    padding-left: 25px;
+}
+
+.footer__descr > p {
+    margin: 0;
+    line-height: 45px;
+}
+
+.socialNetworks {
+    max-width: 400px;
+    margin: auto;
+}
+
+.footer__phone {
+    color: #fff;
+    font-size: 36px;
+    font-family: SegoeUiSemilight;
+    text-align: center;
+}
+
+.footer__bottomRow {
+    color: #999;
+    font-family: SegoeUISemilight;
+    font-size: 16px;
+    padding-top: 100px;
+}
+
+.footer__info > p {
+    margin: 0;
+    line-height: 21px;
+}
+
+.footer__copyright {
+    text-align: center;
+}
+
+/* END FOOTER */
