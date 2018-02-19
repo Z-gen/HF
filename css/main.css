@@ -126,6 +126,19 @@ h3 {
     font-weight: 200;
 }
 
+.fontSize_52px {
+    font-size: 52px;
+}
+.fontSize_26px {
+    font-size: 26px;
+}
+.fontSize_38px {
+    font-size: 38px;
+}
+.fontSize_70px {
+    font-size: 70px;
+}
+
 
 
 /* GREED */
@@ -145,6 +158,26 @@ h3 {
 .screenWidth_920 {
     max-width: 920px;
     margin: auto;
+    display: flex;
+}
+
+.screenWidth_1600 {
+    max-width: 1600px;
+    margin: auto;
+}
+
+#calculatorSection {
+    height: auto;
+}
+#tryOut {
+    height: 90vh;
+}
+
+
+/*for not flex blocks*/
+
+.horizontal-center {
+    text-align: center;
 }
 
 .row {
@@ -185,10 +218,21 @@ h3 {
 
 /*колонки*/
 
+.col-half {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
 .col-third {
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
 }
+.col-fifth {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+
 
 /* END OF GREED */
 
@@ -614,6 +658,761 @@ h3 {
 /* END THIRD SCREEN*/
 
 
+/*FOUTRH SCREEN*/
+
+
+.btnsWrap {
+    margin-top: 110px;
+}
+
+.btnsWrap a {
+    text-decoration: none;
+    color: #333333;
+    border: 3px solid #ccc;
+    border-radius: 70px;
+    font-size: 28px;
+    font-family: 'CenturyGothic';
+    padding: 35px 80px;
+    width: 535px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0 35px
+}
+
+.btnsWrap a:hover {
+    border-color: #1BDB21;
+}
+
+/*END FOUTRH SCREEN*/
+
+
+
+/*FIFTH SCREEN(RATIONS)*/
+
+
+.choiceRations {
+    background-image: url(../img/rations.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 60px 0;
+}
+.choiceRations:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+}
+.choiceRations > .row {
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+
+.choiceRations .titleScreen h1 {
+    color: #fff;
+}
+
+.rationContainer {
+    padding-bottom: 80px;
+}
+
+.rationNames {
+    width: 100%;
+    padding: 70px 20px 100px;
+    display: flex;
+    align-items: center;
+    height: 250px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.rationName {
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+.rationName p {
+    font-size: 36px;
+    font-family: 'CenturyGothic';
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    margin: 0;
+    transition: all 0.5s ease;
+    position: relative;
+    top: 0;
+}
+.rationDescription {
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 200%;
+    left: 0;
+    right: 0;
+}
+.rationDescription span {
+    display: block;
+    font-size: 36px;
+}
+.rationDescription span:nth-child(2) {
+    font-family: 'SegoeUiSemilight';
+    font-size: 30px;
+}
+.rationName:hover p {
+    font-size: 40px;
+    top: -20px;
+}
+.rationName:hover .rationDescription {
+    top: calc(100% - 10px);
+    opacity: 1;
+}
+
+
+.js-tabWidget__content {
+    display: none;
+}
+.js-tabWidget__content_current_yes {
+    display: block;
+}
+
+.rationTopPanel__item {
+    color: #666;
+    font-size: 24px;
+    font-family: 'CenturyGothic';
+    text-align: center;
+    padding: 28px 0;
+    cursor: pointer;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.rationTopPanel__item:first-child {
+    background-color: #d6d6d6;
+}
+.rationTopPanel__item:nth-child(2) {
+    background-color: #e6e6e6;
+}
+.rationTopPanel__item:nth-child(3) {
+    background-color: #f0f0f0;
+}
+
+.rationTopPanel__item.activePanel,
+.rationTopPanel__item:hover {
+    background-color: #fff;
+}
+
+
+.panelDays {
+    justify-content: space-between;
+    padding-left: 100px;
+    position: relative;
+    padding-top: 55px;
+}
+
+.panelDaysItem {
+    display: inline-block;
+    vertical-align: middle;
+    color: #333333;
+    border: 1px solid #ccc;
+    border-radius: 70px;
+    font-size: 20px;
+    font-family: 'CenturyGothic';
+    padding: 12px 0px;
+    text-align: center;
+    max-width: 180px;
+    flex: 1;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.panelDaysItem.activeDay,
+.panelDaysItem:hover {
+    border-color: #1BDB21;
+    color: #1BDB21;
+}
+
+.panelDaysMan {
+    width: 70px;
+    height: 70px;
+    background-color: #CCCCCC;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 35%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 48px;
+}
+
+.panelDaysMan.thinMan {
+    background-image: url(../img/man1.png);
+}
+
+.panelDaysMan.fatMan {
+    background-image: url(../img/man3.png);
+}
+
+.panelDaysMan.strongMan {
+    background-image: url(../img/man2.png);
+}
+
+
+.rationData {
+    margin-top: 55px;
+    padding-left: 100px;
+}
+
+.rationBlocksWrap {
+    flex: 0 0 66%;
+    max-width: 66%;
+}
+
+.rationSummWrap {
+    flex: 0 0 33%;
+    max-width: 33%;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+}
+
+.rationBlock {
+    border: 1px solid #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.rationBlock__overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 60px 20px 0 40px;
+    opacity: 0;
+    top: 100%;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    line-height: 1.1;
+}
+
+.rationBlock:hover .rationBlock__overlay {
+    opacity: 1;
+    top: 0;
+}
+
+.rationBlock img {
+    width: 100%;
+}
+
+.rationBlock__title {
+    font-size: 49px;
+    font-family: 'CenturyGothic';
+}
+.rationBlock__info {
+    font-size: 22px;
+    font-family: 'CenturyGothic';
+}
+
+.rationBlockTotal {
+    border-color: #ccc;
+    padding: 60px 20px 10px 40px;
+}
+.rationBlockTotal__list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    color: #4D4D4D;
+    font-family: 'CenturyGothic';
+}
+.rationBlockTotal__list ul span {
+    font-size: 32px;
+}
+
+
+.rationSummWrap {
+    color: #4d4d4d;
+    line-height: 1.1;
+    font-family: 'SegoeUiSemilight';
+    font-size: 26px;
+}
+
+.rationSummWrap__title {
+    font-size: 72px;
+}
+
+.rationSummWrap__button button {
+    color: #fff;
+    border: none;
+    background-color: #1BDB21;
+    border-radius: 50px;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-family: 'CenturyGothic';
+    padding: 15px 50px;
+    cursor: pointer;
+    outline: none;
+}
+
+.rationSummWrap__order > div {
+    margin: 8px 0;
+}
+
+
+/*END FIFTH SCREEN(RATIONS)*/
+
+
+
+/* ЗАКИНУТЬ В MAIN !!!
+!!!!!!!!!!!!!!!!!!!!!!
+*/
+
+/*.row {*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+/*}*/
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!*/
+
+/* WHY US SCREEN*/
+
+.whyUsScreen {
+    background-color: #1a1a1a;
+    height: 580px;
+}
+
+.whyUsScreen > h1 {
+    margin-top: 130px;
+    color: #fff;
+    text-align: center;
+}
+
+.whyUs__container {
+    width: 1020px;
+    max-width: 1020px;
+    padding-top: 60px;
+    margin: 0 auto;
+}
+
+.whyUs__item {
+    text-align: center;
+    max-width: 134px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.whyUs__icon {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.whyUs__descr {
+    display: flex;
+    height: 45px;
+}
+
+.whyUs__descr > span {
+    color: #fff;
+    font-family: 'SegoeUiSemilight';
+    font-size: 18px;
+    margin: auto;
+    line-height: 25px;
+}
+
+/* END WHY US SCREEN*/
+
+
+/* COMPARISON */
+
+.comparisonScreen {
+    background-image: url(../img/comparisonScreen.jpg);
+    color: #fff;
+}
+
+.comparisonScreen .titleScreen {
+    padding-top: 80px;
+}
+
+.comparisonScreen .titleScreen > h1 {
+    color: #fff;
+}
+
+.comparisonScreen__container {
+    width: 1315px;
+    max-width: 1315px;
+    margin: 0 auto;
+}
+
+.comparisonScreen__mainRow {
+    padding-bottom: 90px;
+}
+
+.comparison__market {
+    padding-top: 120px;
+}
+
+.comparison__market > .comparison__itemWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.market__spin {
+    margin-right: 40px;
+}
+
+.market__spin > span {
+    display: block;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+}
+
+.market__spin .spin__up {
+    border-bottom: 21px solid #fff;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    margin-bottom: 38px;
+    transition: all .1s ease;
+}
+
+.market__spin .spin__down {
+    border-top: 21px solid #fff;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    transition: all .1s ease;
+}
+
+.market__spin .spin__up:hover,
+.market__spin .spin__down:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-out;
+}
+
+.market__spin .spin__up:active,
+.market__spin .spin__down:active {
+    transform: scale(0.9);
+    transition: all 0.05s ease-out;
+}
+
+.market__text {
+    text-align: left;
+}
+
+.market__price {
+    margin: 0;
+}
+
+.market__type {
+    font-family: CenturyGothic;
+    font-size: 45px;
+    margin: 0;
+    padding-left: 25px;
+    margin-top: -15px;
+}
+
+.market__sum {
+    font-family: 'CenturyGothic';
+    font-size: 135px;
+    color: #fff;
+}
+
+.market__currency {
+    font-family: 'SegoeUISemilight';
+    font-size: 45px;
+}
+
+.comparison__economy img {
+    position: absolute;
+}
+
+.comparison__economy > .comparison__itemWrapper {
+    background-image: url(../img/ap.png);
+    width: 305px;
+    height: 200px;
+    padding-top: 208px;
+    padding-left: 13px;
+    margin: auto;
+    filter: hue-rotate(31deg);
+}
+
+.economy__text {
+    text-align: center;
+    margin: 0;
+}
+
+.economy__sum {
+    font-family: 'CenturyGothic';
+    font-size: 90px;
+    color: #fff;
+}
+
+.economy__currency {
+    font-family: 'SegoeUISemilight';
+    font-size: 45px;
+}
+
+.price__text {
+    margin: auto;
+    padding-left: 8px;
+}
+
+.comparison__price {
+    padding-top: 120px;
+}
+
+.comparison__price > .comparison__itemWrapper {
+    width: 228px;
+    height: 228px;
+    border-radius: 50%;
+    background-color: #84ff1c;
+    margin: auto;
+    display: flex;
+}
+
+.price__sum {
+    font-family: 'CenturyGothic';
+    font-size: 70px;
+    color: #fff;
+}
+
+.price__currency {
+    font-family: 'SegoeUISemilight';
+    font-size: 35px;
+}
+
+
+.underText p,
+.underText span{
+    font-family: 'CenturyGothic';
+    font-size: 35px;
+    text-align: center;
+    margin: 0;
+}
+
+.economyPercent__wrapper {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.economyPercent__textPart {
+    white-space: pre;
+}
+
+.economyPercent__slider {
+    display: inline-block;
+}
+
+.slick-vertical .slick-slide {
+    width: auto !important;
+    float: none;
+    outline: none;
+}
+
+
+/* END COMPARISON */
+
+
+/* FAQ SCREEN */
+
+.faqScreen .titleScreen > h1 {
+    color: #808080;
+}
+
+.faqScreen {
+    background-image: url(../img/ap_back.png);
+    background-size: contain;
+    background-position-x: 100%;
+}
+
+.faqMainRow {
+    height: 100%;
+    padding: 50px 0 150px 70px;
+}
+
+.faqSlider {
+    height: 100%;
+}
+
+.faqSlider.ui-slider {
+    width: 7px;
+    border-radius: 7px;
+    background-color: #e6e6e6;
+    cursor: pointer;
+}
+
+.faqSlider > .ui-slider-handle {
+    left: -11px;
+    margin-left: 0;
+    margin-bottom: -11px;
+    background-color: #fff;
+    border: 1px solid #b3b3b3;
+    border-radius: 27px;
+    width: 27px;
+    height: 27px;
+    outline: none;
+    cursor: pointer;
+}
+
+.faqSliderPart {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.questions {
+    height: 100%;
+    padding-left: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.questions__item {
+    cursor: pointer;
+}
+
+.questions .questions__item > p {
+    color: #999;
+    font-family: CenturyGothic;
+    font-size: 18px;
+    margin: 0;
+    transition: all .3s ease;
+}
+
+.questions .questions__item > p:hover {
+    color: #666;
+}
+
+.questions .questions__item.active > p {
+    color: #4d4d4d;
+    font-size: 24px;
+}
+
+.answers__wrapper {
+    padding: 0 120px 0 200px;
+}
+
+.answer__item {
+    font-family: CenturyGothic;
+    color: #4d4d4d;
+    font-size: 24px;
+    position: relative;
+    padding-left: 35px;
+}
+
+.answer__item > p {
+    margin: 0;
+    -webkit-backface-visibility: hidden;
+}
+
+.slick-slide {
+    outline: none;
+}
+
+.answer__item::before {
+    content: '';
+    top: 5px;
+    left: 0;
+    display: block;
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 15px solid #ccc;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+
+/* END FAQ SCREEN */
+
+
+/* FOOTER */
+
+footer {
+    background-color: #1a1a1a;
+}
+
+.footer__container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 200px 0 45px 0;
+}
+
+.footer__descr {
+    font-family: SegoeUISemilight;
+    font-size: 36px;
+    color: #fff;
+    padding-left: 25px;
+}
+
+.footer__descr > p {
+    margin: 0;
+    line-height: 45px;
+}
+
+.socialNetworks {
+    max-width: 400px;
+    margin: auto;
+}
+
+.footer__phone {
+    color: #fff;
+    font-size: 36px;
+    font-family: SegoeUiSemilight;
+    text-align: center;
+}
+
+.footer__bottomRow {
+    color: #999;
+    font-family: SegoeUISemilight;
+    font-size: 16px;
+    padding-top: 100px;
+}
+
+.footer__info > p {
+    margin: 0;
+    line-height: 21px;
+}
+
+.footer__copyright {
+    text-align: center;
+}
+
+/* END FOOTER */
 
 
 

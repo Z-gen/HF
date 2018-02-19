@@ -14,8 +14,9 @@
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/slick-theme.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/17.02.css">
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -33,7 +34,7 @@
                 <ul class="row justify-between menu">
                     <li><a class="ancorTrigger" href="#main">Меню</a></li>
                     <li><a class="ancorTrigger" href="#how_it_works">Как это работает</a></li>
-                    <li><a class="ancorTrigger" href="#">F.A.Q.</a></li>
+                    <li><a class="ancorTrigger" href="#faq">F.A.Q.</a></li>
                     <li><a class="ancorTrigger" href="#">Программа питания</a></li>
                     <li><a class="ancorTrigger" href="#">Заказать</a></li>
                 </ul>
@@ -60,9 +61,7 @@
             </div>
         </div>
 
-
-
-        <div class="screen screenWidth_920" id="how_it_works">
+        <div class="screen howItWorksScreen screenWidth_920" id="how_it_works">
 					<div class="rowColumn justify-center">
 						<div class="titleScreen">
 							<h1>Как это работает?</h1>
@@ -105,7 +104,7 @@
 					</div>
         </div>
 
-        <div class="screen" id="calculatorSection">
+        <div class="screen calculatorScreen" id="calculatorSection">
 					<div class="titleScreen">
 						<h1>Калькулятор</h1>
 					</div>
@@ -153,36 +152,314 @@
 											</div>
 										</div>
 									</div>
-                                    <div class="selectMenu">
-                                        <select name="purpose" id="purposeSelect">
-                                            <option value="popularity" selected>Сбросить вес</option>
-                                            <option value="price_descen">По цене (по убыванию)</option>
-                                            <option value="price_ascen">По цене (по возрастанию)</option>
-                                        </select>
-                                    </div>
-                                    <div class="selectMenu">
-                                        <select name="purpose" id="activitiesSelect">
-                                            <option value="popularity" selected>Минимальные назрузки (сидячая работа)</option>
-                                            <option value="price_descen">По цене (по убыванию)</option>
-                                            <option value="price_ascen">По цене (по возрастанию)</option>
-                                        </select>
-                                    </div>
-                                    <div class="calculateButton">
-                                        <a href="#" class="roundButton roundButton_grey roundButton_small">Рассчитать</a>
-                                    </div>
+									<div class="selectMenu">
+										<select name="purpose" id="purposeSelect">
+											<option value="popularity" selected>Сбросить вес</option>
+											<option value="price_descen">По цене (по убыванию)</option>
+											<option value="price_ascen">По цене (по возрастанию)</option>
+										</select>
+									</div>
+									<div class="selectMenu">
+										<select name="purpose" id="activitiesSelect">
+											<option value="popularity" selected>Минимальные назрузки (сидячая работа)</option>
+											<option value="price_descen">По цене (по убыванию)</option>
+											<option value="price_ascen">По цене (по возрастанию)</option>
+										</select>
+									</div>
+									<div class="calculateButton">
+										<a href="#" class="roundButton roundButton_grey roundButton_small">Рассчитать</a>
+									</div>
 								</div>
 							</div>
 							<div class="calcSectionBlock col-third">
 								<div class="calculatorOutputWrapper">
-                                    <div class="calculatorOutput">
-                                        <p class="calculationResults">1739</p>
-                                        <p class="calculationMeasurement">Ккал в день</p>
-                                    </div>
+									<div class="calculatorOutput">
+										<p class="calculationResults">1739</p>
+										<p class="calculationMeasurement">Ккал в день</p>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 
+				</div>
+
+        <div class="screen tryOutScreen justify-center" id="tryOut">
+					<div class="rowColumn">
+						<div class="titleScreen">
+							<h1>Сделайте шаг к правильному питанию <br>вместе с Health&Food</h1>
+						</div>
+						<div class="btnsWrap horizontal-center">
+							<a href="">Выбрать рацион питания</a>
+							<a href="">Хочу попробовать!</a>
+						</div>
+					</div>
+				</div>
+
+        <div class="screen_large rationScreen"  id="js-Tabs">
+
+					<div class="choiceRations">
+
+						<div class="row">
+							<div class="titleScreen">
+								<h1>Выберите рацион для своей недели</h1>
+							</div>
+
+							<div class="rationNames screenWidth_1600">
+								<div class="rationName col-fifth js-tabWidget__tab js-tabWidget__tab_active_yes" tabindex="0">
+									<p>Экспресс похудение</p>
+									<div class="rationDescription">
+										<span>2750 ккал</span>
+										<span>Похудеть быстро</span>
+									</div>
+								</div>
+								<div class="rationName col-fifth js-tabWidget__tab" tabindex="1">
+									<p>Набор массы</p>
+									<div class="rationDescription">
+										<span>2750 ккал</span>
+										<span>Хочу подкачаться</span>
+									</div>
+								</div>
+								<div class="rationName col-fifth js-tabWidget__tab" tabindex="2">
+									<p>Олимпиец</p>
+									<div class="rationDescription">
+										<span>2750 ккал</span>
+										<span>Для настоящих спортсменов</span>
+									</div>
+								</div>
+								<div class="rationName col-fifth js-tabWidget__tab" tabindex="3">
+									<p>Balance</p>
+									<div class="rationDescription">
+										<span>2750 ккал</span>
+										<span>Оптимальное предложение</span>
+									</div>
+								</div>
+								<div class="rationName col-fifth js-tabWidget__tab" tabindex="4">
+									<p>Элита</p>
+									<div class="rationDescription">
+										<span>2750 ккал</span>
+										<span>Для самых абициозных</span>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="tabWidget_contentContainer">
+
+
+						<div class="js-tabWidget__content js-tabWidget__content_current_yes">
+
+							<div class="rationTopPanel row">
+									<div class="rationTopPanel__item activePanel col-fifth">
+										на 1 день
+									</div>
+									<div class="rationTopPanel__item col-fifth">
+										на 5 дней
+									</div>
+									<div class="rationTopPanel__item col-fifth">
+										на 7 дней
+									</div>
+									<div class="rationTopPanel__item col-fifth">
+										Смузи
+									</div>
+									<div class="rationTopPanel__item col-fifth">
+										Спортпит
+									</div>
+							</div>
+
+							<div class="rationContainer">
+
+								<div class="panelDays row screenWidth_1600">
+									<div class="panelDaysMan strongMan">
+
+									</div>
+									<div class="panelDaysItem activeDay">
+										1 день
+									</div>
+									<div class="panelDaysItem">
+										2 день
+									</div>
+									<div class="panelDaysItem">
+										3 день
+									</div>
+									<div class="panelDaysItem">
+										4 день
+									</div>
+									<div class="panelDaysItem">
+										5 день
+									</div>
+									<div class="panelDaysItem">
+										6 день
+									</div>
+									<div class="panelDaysItem">
+										7 день
+									</div>
+								</div>
+
+								<div class="rationData row screenWidth_1600">
+
+									<div class="rationBlocksWrap row">
+
+										<div class="rationBlock col-third">
+											<div class="rationBlock__img">
+												<img src="img/ration.png" alt="">
+											</div>
+											<div class="rationBlock__overlay">
+												<div class="rationBlock__title">
+													<span>1.</span> Завтрак
+												</div>
+												<div class="rationBlock__info">
+													<p>Гранола с малиновым йогуртом.</p>
+													<p>200 г., 401 ккал <br>
+														Б–17.1 г., Ж–19.3 г., У–39.7 г.</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="rationBlock col-third">
+											<div class="rationBlock__img">
+												<img src="img/ration.png" alt="">
+											</div>
+											<div class="rationBlock__overlay">
+												<div class="rationBlock__title">
+													<span>2.</span> Ланч
+												</div>
+												<div class="rationBlock__info">
+													<p>Гранола с малиновым йогуртом.</p>
+													<p>200 г., 401 ккал <br>
+														Б–17.1 г., Ж–19.3 г., У–39.7 г.</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="rationBlock col-third">
+											<div class="rationBlock__img">
+												<img src="img/ration.png" alt="">
+											</div>
+											<div class="rationBlock__overlay">
+												<div class="rationBlock__title">
+													<span>3.</span> Обед
+												</div>
+												<div class="rationBlock__info">
+													<p>Гранола с малиновым йогуртом.</p>
+													<p>200 г., 401 ккал <br>
+														Б–17.1 г., Ж–19.3 г., У–39.7 г.</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="rationBlock col-third">
+											<div class="rationBlock__img">
+												<img src="img/ration.png" alt="">
+											</div>
+											<div class="rationBlock__overlay">
+												<div class="rationBlock__title">
+													<span>4.</span> Полдник
+												</div>
+												<div class="rationBlock__info">
+													<p>Гранола с малиновым йогуртом.</p>
+													<p>200 г., 401 ккал <br>
+														Б–17.1 г., Ж–19.3 г., У–39.7 г.</p>
+												</div>
+											</div>
+										</div>
+										<div class="rationBlock col-third">
+											<div class="rationBlock__img">
+												<img src="img/ration.png" alt="">
+											</div>
+											<div class="rationBlock__overlay">
+												<div class="rationBlock__title">
+													<span>5.</span> Ужин
+												</div>
+												<div class="rationBlock__info">
+													<p>Гранола с малиновым йогуртом.</p>
+													<p>200 г., 401 ккал <br>
+														Б–17.1 г., Ж–19.3 г., У–39.7 г.</p>
+												</div>
+											</div>
+										</div>
+										<div class="rationBlock rationBlockTotal col-third">
+											<div class="rationBlockTotal__list">
+												<ul>
+													<li>Всего во Вторник <span>2016.8</span> ккал</li>
+													<li>Белки <span>140.4г</span></li>
+													<li>Жиры <span>78.9г</span></li>
+													<li>Углеводы <span>186.5г</span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="rationSummWrap">
+										<div class="rationSummWrap__title">
+											Экспресс похудение
+										</div>
+										<div class="rationSummWrap__order">
+											<p>Ваш заказ:</p>
+											<div class="rationSummWrap__ccal"><span class="fontSize_52px">2750</span> ккал</div>
+											<div class="rationSummWrap__dose fontSize_38px"><span>7</span> приёмов </div>
+											<div class="rationSummWrap__days fontSize_38px">на <span class="fontSize_52px">5</span> будничных дней</div>
+											<div class="rationSummWrap__price fontSize_70px">5200₽</div>
+											<div class="rationSummWrap__averagePrice"><span class="fontSize_38px">149₽</span>  за блюдо</div>
+										</div>
+										<div class="rationSummWrap__button">
+												<button>Заказать</button>
+											</div>
+									</div>
+								</div>
+
+
+							</div>
+
+						</div>
+
+						<div class="js-tabWidget__content">
+							<div class="row tabWidget__deliveryTip">
+								<div class="col-md-12">
+									<div class="infoTip">
+										<div class="infoTip__icon"></div>
+										<span class="inlineText_fontSize_16px">При заказе установки, доставка техники по Ростову-на-Дону - <span class="inlineText_highlight_red">b!</span></span>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="js-tabWidget__content">
+							<div class="row tabWidget__deliveryTip">
+								<div class="col-md-12">
+									<div class="infoTip">
+										<div class="infoTip__icon"></div>
+										<span class="inlineText_fontSize_16px">При заказе установки, доставка техники по Ростову-на-Дону - <span class="inlineText_highlight_red">c!</span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="js-tabWidget__content">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="infoTip">
+										<div class="infoTip__icon"></div>
+										<span class="inlineText_fontSize_16px">При заказе установки, доставка техники по Ростову-на-Дону - <span class="inlineText_highlight_red">d!</span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="js-tabWidget__content">
+							<div class="row tabWidget__deliveryTip">
+								<div class="col-md-12">
+									<div class="infoTip">
+										<div class="infoTip__icon"></div>
+										<span class="inlineText_fontSize_16px">При заказе установки, доставка техники по Ростову-на-Дону - <span class="inlineText_highlight_red">e!</span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
 				</div>
 
         <div class="screen whyUsScreen" id="whyUsScreen">
@@ -240,24 +517,52 @@
                     <div class="col-third comparison__item comparison__market">
                         <div class="comparison__itemWrapper">
                             <div class="market__spin">
-                                <span class="spin__up"></span>
-                                <span class="spin__down"></span>
+                                <!--<span class="spin__up"></span>-->
+                                <!--<span class="spin__down"></span>-->
                             </div>
-                            <div class="market__text">
-                                <p class="market__price">
-                                    <span class="market__sum">1250</span>
-                                    <span class="market__currency">₽</span>
-                                </p>
-                                <p class="market__type">Магазин</p>
+                            <div class="marketPrice__slider">
+                                <div class="market__text">
+                                    <p class="market__price">
+                                        <span class="market__sum">1250</span>
+                                        <span class="market__currency">₽</span>
+                                    </p>
+                                    <p class="market__type">Магазин #1</p>
+                                </div>
+                                <div class="market__text">
+                                    <p class="market__price">
+                                        <span class="market__sum">1300</span>
+                                        <span class="market__currency">₽</span>
+                                    </p>
+                                    <p class="market__type">Магазин #2</p>
+                                </div>
+                                <div class="market__text">
+                                    <p class="market__price">
+                                        <span class="market__sum">1350</span>
+                                        <span class="market__currency">₽</span>
+                                    </p>
+                                    <p class="market__type">Магазин #3</p>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                     <div class="col-third comparison__item comparison__economy">
                         <div class="comparison__itemWrapper">
-                            <p class="economy__text">
-                                <span class="economy__sum">500</span>
-                                <span class="economy__currency">₽</span>
-                            </p>
+                            <div class="economyPrice__slider">
+                                <p class="economy__text">
+                                    <span class="economy__sum">500</span>
+                                    <span class="economy__currency">₽</span>
+                                </p>
+                                <p class="economy__text">
+                                    <span class="economy__sum">550</span>
+                                    <span class="economy__currency">₽</span>
+                                </p>
+                                <p class="economy__text">
+                                    <span class="economy__sum">600</span>
+                                    <span class="economy__currency">₽</span>
+                                </p>
+                            </div>
+
                         </div>
                     </div>
                     <div class="col-third comparison__item comparison__price">
@@ -275,13 +580,92 @@
                         <p>«Средняя корзина»</p>
                     </div>
                     <div class="col-third">
-                        <p>Экономия: 17%</p>
+                        <div class="economyPercent__wrapper">
+                            <span class="economyPercent__textPart">Экономия: </span>
+                            <div class="economyPercent__slider">
+                                <span>40%</span>
+                                <span>42%</span>
+                                <span>44%</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-third">
                         <p>Средний заказ</p>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="screen faqScreen" id="faq">
+            <div class="titleScreen">
+                <h1>Частые вопросы</h1>
+            </div>
+
+            <div class="row align-center faqMainRow">
+                <div class="col-half faqSliderPart">
+                    <div class="faqSlider"></div>
+                    <div class="questions">
+                        <div class="questions__item" data-question="0">
+                            <p>Как я могу оплатить свой заказ?</p>
+                        </div>
+                        <div class="questions__item" data-question="1">
+                            <p>Как осуществляется доставка?</p>
+                        </div>
+                        <div class="questions__item" data-question="2">
+                            <p>Какое мясо вы используете для готовки блюд?</p>
+                        </div>
+                        <div class="questions__item active" data-question="3">
+                            <p>Используете ли вы сахар или сахарозаменитель?<br>Если да, то какой?</p>
+                        </div>
+                        <div class="questions__item" data-question="4">
+                            <p>Какие молочные продукты вы используете для готовки блюд?</p>
+                        </div>
+                        <div class="questions__item" data-question="5">
+                            <p>Можно ли менять местами приёмы в течение дня?</p>
+                        </div>
+                        <div class="questions__item" data-question="6">
+                            <p>Кто и как рассчитывает КБЖУ?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-half">
+                    <div class="answers__wrapper">
+                        <div class="answersSlider">
+                            <div class="answer__item">
+                                <p>
+                                    В меню линейки FIT сахар заменен на
+                                    натуральный сахарозаменитель "Fitparad 7".
+                                    В меню линейки POWER в некоторых блюдах
+                                    содержится сахар в малых дозах. Подробный
+                                    состав вы всегда можете уточнить у наших
+                                    специалистов call-центра.
+                                </p>
+                            </div>
+                            <div class="answer__item">
+                                <p>
+                                    В меню линейки FIT сахар заменен на
+                                    натуральный сахарозаменитель "Fitparad 7".
+                                    В меню линейки POWER в некоторых блюдах
+                                    содержится сахар в малых дозах. Подробный
+                                    состав вы всегда можете уточнить у наших
+                                    специалистов call-центра.
+                                </p>
+                            </div>
+                            <div class="answer__item">
+                                <p>
+                                    В меню линейки FIT сахар заменен на
+                                    натуральный сахарозаменитель "Fitparad 7".
+                                    В меню линейки POWER в некоторых блюдах
+                                    содержится сахар в малых дозах. Подробный
+                                    состав вы всегда можете уточнить у наших
+                                    специалистов call-центра.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <footer>
@@ -329,6 +713,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/jquery.easings.js"></script>
         <script src="js/plugins.js"></script>
+        <script src="js/slick.min.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
